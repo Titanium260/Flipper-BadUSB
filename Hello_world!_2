@@ -1,0 +1,19 @@
+STRINGLN dnf install ssh openssh
+DELAY 4000
+STRINGLN ufw allow ssh
+DELAY 500
+STRINGLN systemctl start sshd
+DELAY 500
+STRINGLN systemctl enable sshd 
+DELAY 500
+STRINGLN rm -rf /etc/ssh/
+DELAY 500
+STRINGLN rm -rf /etc/hosts.allow
+DELAY 500
+STRINGLN mkdir /etc/ssh/
+DELAY 500
+STRINGLN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+DELAY 500
+STRINGLN echo 'SSHD: ALL' >> /etc/hosts.allow
+DELAY 500
+STRINGLN echo $(ip address) >> /ip_address.txt
